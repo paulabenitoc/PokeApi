@@ -1,34 +1,47 @@
 body {
-    background-color: orangered;
+    background-color: #B32A0A;
     margin: 0;
-    font-family: rubik;
+    font-family: 'Arial';
     color: white;
+    width: 100%;
 }
 
 .container {
     padding: 40px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 54px;
+.pokelogo {
+    width: 40%;
 }
 
-.card {
+.searchInput {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        width: 20%;
+        border-radius: 10px;
+        border: 0px;
+    }
+
+.pokedex {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 80px; 
+}
+
+.pokemon {
     list-style: none;
     padding: 40px;
-    background-color: #f4f4f4;
+    background-color: #FECA1B;
     color: #222;
     text-align: center;
-}
-
-.card-title {
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 0;
+    border-radius: 150px;
 }
 
 .card-subtitle {
@@ -38,18 +51,29 @@ h1 {
 }
 
 .card-image {
-    height: 180px;
+    height: 150px;
 }
 
 #pokedex {
     padding-inline-start: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
-.card:hover {
+.pokemon:hover {
     animation: bounce 0.5s linear;
+    cursor: pointer;
+}
+
+.filterButton {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #3761A8;
+    color: white;
+    cursor: pointer;
 }
 
 @keyframes bounce {
